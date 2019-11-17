@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1332048615
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1332048616}
-  m_Layer: 0
-  m_Name: bulletSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1332048616
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332048615}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 2.222, y: 0.5, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_Children: []
-  m_Father: {fileID: 3116924619924904880}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097221353351276963
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,13 +12,9 @@ GameObject:
   - component: {fileID: 7943011240539267478}
   - component: {fileID: 7943011240539267465}
   - component: {fileID: 7943011240539267464}
-  - component: {fileID: 8296172668830713307}
-  - component: {fileID: 8296172668830713308}
-  - component: {fileID: 8296172668830713309}
-  - component: {fileID: 6492514912075966525}
   m_Layer: 0
   m_Name: SubmarineRotated
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +32,6 @@ Transform:
   m_Children:
   - {fileID: 4841182286920108168}
   - {fileID: 7943011240439186216}
-  - {fileID: 1332048616}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -90,7 +55,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &7943011240539267465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subRB: {fileID: 7943011240539267478}
   speedText: {fileID: 0}
-  speed: 1
+  speed: 1.5
 --- !u!114 &7943011240539267464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,69 +86,6 @@ MonoBehaviour:
   theCamera: {fileID: 0}
   smoothing: 5
   adjustmentAngle: 0
---- !u!70 &8296172668830713307
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097221353351276963}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.45}
-  m_Size: {x: 4.5, y: 2.5}
-  m_Direction: 1
---- !u!114 &8296172668830713308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097221353351276963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccde32c1687cb748a43473dc77199a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7750731692699028699, guid: 727e5a9c0d4b3ca4f90f32f6930f2441,
-    type: 3}
-  bulletSpawn: {fileID: 1332048616}
-  fireTime: 1
---- !u!114 &8296172668830713309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097221353351276963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7214fab80e17341488a6e53455dbe6fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6492514912075966525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097221353351276963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d40a3a7d0dd0ef5468db707e78244fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  onDie:
-    m_PersistentCalls:
-      m_Calls: []
-  onDamaged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &5554795528126270526
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,8 +206,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.21115166, g: 0.6886792, b: 0.2858496, a: 1}
-  m_Intensity: 10
-  m_Range: 3
+  m_Intensity: 1
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
