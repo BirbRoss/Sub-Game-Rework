@@ -47,7 +47,11 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
+<<<<<<< HEAD
   controlID: 56
+=======
+  controlID: 126
+>>>>>>> parent of aa443f0... Version 0.0.08 (Broken)
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +130,11 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 18}
   m_Selected: 0
+<<<<<<< HEAD
   m_LastSelected: 0
+=======
+  m_LastSelected: 1
+>>>>>>> parent of aa443f0... Version 0.0.08 (Broken)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,9 +356,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 06300000
     m_LastClickedID: 12294
     m_ExpandedIDs: 00000000a82d000000ca9a3b
+=======
+    m_SelectedIDs: 542d0000
+    m_LastClickedID: 11604
+    m_ExpandedIDs: 00000000542d000000ca9a3b
+>>>>>>> parent of aa443f0... Version 0.0.08 (Broken)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +392,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a82d0000
+=======
+    m_ExpandedIDs: 00000000542d0000
+>>>>>>> parent of aa443f0... Version 0.0.08 (Broken)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,9 +519,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 10faffff
+=======
+      m_SelectedIDs: fcfaffff
+      m_LastClickedID: -1284
+      m_ExpandedIDs: fcfaffff44fbffff
+>>>>>>> parent of aa443f0... Version 0.0.08 (Broken)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -563,9 +587,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
+=======
+    m_Target: {x: -4.7549577, y: 0.13627453, z: -2605.103}
+    speed: 2
+    m_Value: {x: -4.7735186, y: 0.12767963, z: -2605.0972}
+>>>>>>> parent of aa443f0... Version 0.0.08 (Broken)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -598,9 +628,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 10
     speed: 2
     m_Value: 10
+=======
+    m_Target: 1.360842
+    speed: 2
+    m_Value: 1.3022411
+>>>>>>> parent of aa443f0... Version 0.0.08 (Broken)
   m_Ortho:
     m_Target: 1
     speed: 2
