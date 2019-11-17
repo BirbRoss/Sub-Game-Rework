@@ -62,11 +62,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AddScore.cs" />
+    <Compile Include="Assets\Scripts\Destoyer\moveTowardsObject.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\GameUI.cs" />
+    <Compile Include="Assets\Scripts\healthSystem.cs" />
     <Compile Include="Assets\Scripts\MouthSmoothLook2D.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\subMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Torpedo.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapon.cs" />
+    <Compile Include="Assets\Scripts\PT\PTMovement.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
-    <Compile Include="Assets\Scripts\subMovement.cs" />
-    <Compile Include="Assets\Scripts\Torpedo.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\smoothLookAtTarget2D.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\TimerEvent.cs" />
     <None Include="Assets\Fonts\LICENSE.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/zacha/Documents/GitHub/Sub-Game-Rework/Submarine game revamp/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
