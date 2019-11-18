@@ -316,6 +316,12 @@
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>D:/zacha/Documents/GitHub/Sub-Game-Rework/Submarine game revamp/Assets/Pathfinding/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
+    <Reference Include="TextMeshPro-2017.3-Runtime">
+      <HintPath>D:/zacha/Documents/GitHub/Sub-Game-Rework/Submarine game revamp/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-2017.3-Editor">
+      <HintPath>D:/zacha/Documents/GitHub/Sub-Game-Rework/Submarine game revamp/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/zacha/Documents/GitHub/Sub-Game-Rework/Submarine game revamp/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
