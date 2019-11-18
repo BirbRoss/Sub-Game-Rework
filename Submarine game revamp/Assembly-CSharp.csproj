@@ -62,11 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\addScore.cs" />
     <Compile Include="Assets\Scripts\Destroyer\moveTowardsObject.cs" />
     <Compile Include="Assets\Scripts\DestroyOnDie.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\healthSystem.cs" />
     <Compile Include="Assets\Scripts\Player\MouthSmoothLook2D.cs" />
+    <Compile Include="Assets\Scripts\Player\sendHealth.cs" />
     <Compile Include="Assets\Scripts\Player\subMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Torpedo.cs" />
     <Compile Include="Assets\Scripts\Player\Weapon.cs" />
