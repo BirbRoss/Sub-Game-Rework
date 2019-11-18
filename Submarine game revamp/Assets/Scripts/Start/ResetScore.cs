@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class playerDeath : MonoBehaviour
+public class ResetScore : MonoBehaviour
 {
-    public void Death()
+ public void reset()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(0);
     }
 }

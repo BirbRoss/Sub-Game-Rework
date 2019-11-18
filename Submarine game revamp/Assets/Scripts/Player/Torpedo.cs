@@ -17,7 +17,7 @@ public class Torpedo : MonoBehaviour
         if (other.tag == "Player")
         {
         }
-        else
+        else if (other.tag == "Enemy")
         {
             other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
             Die();

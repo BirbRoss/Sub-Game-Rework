@@ -15,7 +15,6 @@ public class healthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log("Took damage");
         onDamaged.Invoke(health);
 
         if(health < 1)

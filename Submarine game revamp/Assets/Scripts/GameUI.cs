@@ -29,7 +29,9 @@ public class GameUI : MonoBehaviour
     
     private void UpdateScore(int theScore)
     {
-        playerScore += theScore;
-        scoreText.text = "Score: " + playerScore.ToString();
+            playerScore += theScore;
+            PlayerPrefs.SetInt("highscore", playerScore);
+            Debug.Log(PlayerPrefs.GetInt("highscore"));
+            scoreText.text = "Score: " + playerScore.ToString();
     }
 }

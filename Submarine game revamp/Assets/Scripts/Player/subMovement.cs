@@ -23,7 +23,6 @@ public class subMovement : MonoBehaviour
             if (speedLevel < 3)
             {
                 speedLevel++;
-                Debug.Log(speedLevel);
             }
         }
         else if (Input.GetKeyDown("s"))
@@ -32,7 +31,6 @@ public class subMovement : MonoBehaviour
             if (speedLevel > -1)
             {
                 speedLevel--;
-                Debug.Log(speedLevel);
             }
         }
         
