@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 60
+  controlID: 83
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,20 +337,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Music
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Music
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\zacha\Documents\GitHub\Sub-Game-Rework\Submarine game revamp
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: be2f0000
-    m_LastClickedID: 12222
-    m_ExpandedIDs: 00000000602d000000ca9a3b
+    m_SelectedIDs: b02f0000
+    m_LastClickedID: 12208
+    m_ExpandedIDs: 00000000602d00006a2d0000f42d0000522f0000203e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,7 +503,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 64fbffff
+      m_ExpandedIDs: 8a8bffff608dffff64fbffff1e330000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -563,9 +563,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.6072369, y: 1.6438222, z: -843.4922}
+    m_Target: {x: 0.55644596, y: -0.40322763, z: -2.8726997}
     speed: 2
-    m_Value: {x: 2.6072369, y: 1.6438222, z: -843.4922}
+    m_Value: {x: 0.55644596, y: -0.40322763, z: -2.8726997}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -598,9 +598,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.492264
+    m_Target: 7.321639
     speed: 2
-    m_Value: 19.492264
+    m_Value: 7.321639
   m_Ortho:
     m_Target: 1
     speed: 2

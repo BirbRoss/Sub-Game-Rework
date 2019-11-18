@@ -15,9 +15,9 @@ TagManager:
   - 
   - Player Damage
   - Enemy Health
-  - 
-  - 
-  - 
+  - Player Health
+  - Enemy Damage
+  - Wall Collision
   - 
   - 
   - 
@@ -41,9 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer
+  - name: Ocean
+    uniqueID: 2175280541
+    locked: 0
+  - name: Land
     uniqueID: 3129715753
     locked: 0
-  - name: New Layer
-    uniqueID: 2175280541
+  - name: Enemy
+    uniqueID: 724411535
     locked: 0
