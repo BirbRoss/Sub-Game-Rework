@@ -11,8 +11,6 @@ public class Menu : MonoBehaviour
 
     public InputField inName;
 
-    public Image fade;
-
     private void Start()
     {
         Main.SetActive(true);
@@ -23,12 +21,6 @@ public class Menu : MonoBehaviour
     {
         PlayerPrefs.SetString("playerName", inName.text.ToUpper());
         Debug.Log(PlayerPrefs.GetString("playerName"));
-        fade.gameObject.SetActive(true);
-        Invoke("LoadEvent", 1);
-    }
-
-    public void LoadEvent()
-    {
         SceneManager.LoadScene(1);
     }
 

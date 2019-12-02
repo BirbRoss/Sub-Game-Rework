@@ -81,7 +81,6 @@
     <Compile Include="Assets\Scripts\smoothLookAtTarget2D.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Start\HighScore.cs" />
-    <Compile Include="Assets\Scripts\Start\linkToArtist.cs" />
     <Compile Include="Assets\Scripts\Start\Menu.cs" />
     <Compile Include="Assets\Scripts\Start\ResetScore.cs" />
     <Compile Include="Assets\Scripts\TimerEvent.cs" />
