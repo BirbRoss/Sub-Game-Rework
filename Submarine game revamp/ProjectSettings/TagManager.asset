@@ -48,6 +48,9 @@ TagManager:
   - name: Land
     uniqueID: 3129715753
     locked: 0
+  - name: Player
+    uniqueID: 2420305631
+    locked: 0
   - name: Enemy
     uniqueID: 724411535
     locked: 0
