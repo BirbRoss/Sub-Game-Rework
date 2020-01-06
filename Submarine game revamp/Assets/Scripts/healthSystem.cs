@@ -16,6 +16,7 @@ public class healthSystem : MonoBehaviour
     {
         health -= damage;
         onDamaged.Invoke(health);
+        Debug.Log(health);
 
         if(health < 1)
         {

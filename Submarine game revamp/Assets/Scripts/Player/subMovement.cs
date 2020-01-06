@@ -10,6 +10,10 @@ public class subMovement : MonoBehaviour
     public Rigidbody2D subRB;
     public Text speedText;
     public float speed;
+    public float rotate;
+
+    public ParticleSystem leftParticle;
+    public ParticleSystem rightParticle;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -38,7 +42,7 @@ public class subMovement : MonoBehaviour
         if (speedLevel == -1)
         {
             //subRB.AddForce(Vector2.down * (speed / 2) * Time.deltaTime, ForceMode2D.Force);
-            subRB.velocity = -transform.right * (speed * 0.5f);
+            subRB.velocity = -transform.up * (speed * 0.5f);
             speedText.text = "Speed: BCK";
         }
         else if (speedLevel == 0)
@@ -50,22 +54,52 @@ public class subMovement : MonoBehaviour
         else if (speedLevel == 1)
         {
             //subRB.AddForce(Vector2.up * (speed / 2) * Time.deltaTime, ForceMode2D.Force);
-            subRB.velocity = transform.right * (speed * 0.5f);
+            subRB.velocity = transform.up * (speed * 0.5f);
             speedText.text = "Speed: HLF";
         }
         else if (speedLevel == 2)
         {
             //subRB.AddForce(Vector2.up * speed * Time.deltaTime, ForceMode2D.Force);
-            subRB.velocity = transform.right * speed;
+            subRB.velocity = transform.up * speed;
             speedText.text = "Speed: FUL";
         }
         else if (speedLevel == 3)
         {
             //subRB.AddForce(Vector2.up * (speed * 1.5f) * Time.deltaTime, ForceMode2D.Force);
-            subRB.velocity = transform.right * (speed * 1.5f);
+            subRB.velocity = transform.up * (speed * 1.5f);
             speedText.text = "Speed: FLK";
         }
 
+
         //Here's where rotation goes when I work that out, probably something to do with doing something like Rotate around(Location + 5x(or -x))
+        if (Input.GetKeyDown("a"))
+        {
+            subRB.AddTorque(rotate * 1.5f);
+            leftParticle.Play();
+        }
+        else if (Input.GetKeyDown("d"))
+        {
+            subRB.AddTorque(-rotate * 1.5f);
+            rightParticle.Play();
+        }
+        //removes torque once button isn't pressed
+        if (Input.GetKeyUp("a"))
+        {
+            slowdown();
+            leftParticle.Stop();
+        }
+        else if (Input.GetKeyUp("d"))
+        {
+            slowdown();
+            rightParticle.Stop();
+        }
+
+    }
+
+    void slowdown()
+    {
+        float vel = subRB.angularVelocity;
+        vel = 0;
+        subRB.angularVelocity = vel;
     }
 }

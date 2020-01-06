@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public Transform bulletSpawn;
-    public float fireTime = 0.5f;
+    public GameObject torpPrefab;
+    public Transform torpSpawn;
+    public float TorpTime = 0.5f;
+
+    public GameObject laserPrefab;
+    public Transform laserSpawn;
+    public float LaserTime = 0.5f;
 
     private bool isFiring = false;
 
@@ -15,20 +19,35 @@ public class Weapon : MonoBehaviour
         isFiring = false;
     }
 
-    private void Fire()
+    private void FireTorp()
     {
         isFiring = true;
-        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-        Invoke("SetFiring", fireTime);
+        Instantiate(torpPrefab, torpSpawn.position, torpSpawn.rotation);
+        Invoke("SetFiring", TorpTime);
     }
+    private void FireLaser()
+    {
+        isFiring = true;
+        Quaternion accuracy = Quaternion.Euler(0,0,Random.Range(-7, 7));
+        Instantiate(laserPrefab, laserSpawn.position, laserSpawn.rotation * accuracy);
+        Invoke("SetFiring", LaserTime);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetButton("Fire2"))
+        {
+            if(!isFiring)
+            {
+                FireTorp();
+            }
+        }
         if(Input.GetButton("Fire1"))
         {
             if(!isFiring)
             {
-                Fire();
+                FireLaser();
             }
         }
     }
