@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PTDamage : MonoBehaviour
 {
     public int damage;
-    public float resetTime = 0.25f;
+    public float resetTime;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

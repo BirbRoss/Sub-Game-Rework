@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
 
     private bool isFiring = false;
 
+    public Animator firing;
+
     private void SetFiring()
     {
         isFiring = false;
@@ -43,12 +45,18 @@ public class Weapon : MonoBehaviour
                 FireTorp();
             }
         }
-        if(Input.GetButton("Fire1"))
+
+        if (Input.GetButton("Fire1"))
         {
             if(!isFiring)
             {
                 FireLaser();
+                firing.SetBool("isFiring", true);
             }
+        }
+        else
+        {
+            firing.SetBool("isFiring", false);
         }
     }
 }

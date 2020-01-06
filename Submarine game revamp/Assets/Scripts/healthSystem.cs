@@ -15,12 +15,15 @@ public class healthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+
+        if (health < 1)
+        {
+            onDie.Invoke();           
+        }
+
         onDamaged.Invoke(health);
         Debug.Log(health);
 
-        if(health < 1)
-        {
-            onDie.Invoke();
-        }
+
     }
 }

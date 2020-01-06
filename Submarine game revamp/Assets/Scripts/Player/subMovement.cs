@@ -12,8 +12,15 @@ public class subMovement : MonoBehaviour
     public float speed;
     public float rotate;
 
+    private Animator moveAnim;
+
     public ParticleSystem leftParticle;
     public ParticleSystem rightParticle;
+
+    private void Start()
+    {
+        moveAnim = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -68,6 +75,15 @@ public class subMovement : MonoBehaviour
             //subRB.AddForce(Vector2.up * (speed * 1.5f) * Time.deltaTime, ForceMode2D.Force);
             subRB.velocity = transform.up * (speed * 1.5f);
             speedText.text = "Speed: FLK";
+        }
+
+        if (speedLevel >= 1)
+        {
+            moveAnim.SetBool("HasSpeed", true);
+        }
+        else
+        {
+            moveAnim.SetBool("HasSpeed", false);
         }
 
 
