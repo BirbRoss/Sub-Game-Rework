@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class TimerEvent : MonoBehaviour
 {
-    public float time = 1;
+    public float time;
     public float minTime = 5;
     public float maxTime = 20;
 
@@ -13,26 +13,32 @@ public class TimerEvent : MonoBehaviour
     public bool random = false;
     public UnityEvent onTimeerComplete;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-     if (random)
+        if (random)
         {
             time = Random.Range(minTime, maxTime);
         }
 
-     if(repeat)
+        if (!repeat)
         {
-            InvokeRepeating("OnTimerComplete", 0, time);
+            onTimeerComplete.Invoke();
         }
         else
         {
-            Invoke("OnTimerComplete", time);
+            InvokeRepeating("timerComplete", 0, time);
         }
     }
 
-    private void OnTimerComplete()
+    private void timerComplete()
     {
-        onTimeerComplete.Invoke();
+        {
+            onTimeerComplete.Invoke();
+
+            if (random)
+            {
+                time = Random.Range(minTime, maxTime);
+            }
+        }
     }
 }

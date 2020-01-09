@@ -22,7 +22,7 @@ public class GameUI : MonoBehaviour
         addScore.OnSendScore += UpdateScore;
     }
 
-    private void UpdateHealthBar(int Health)
+    public void UpdateHealthBar(int Health)
     {
         healthBar.value = Health;
     }

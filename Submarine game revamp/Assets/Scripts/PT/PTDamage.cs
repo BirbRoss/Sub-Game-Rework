@@ -6,15 +6,20 @@ using UnityEngine.UI;
 public class PTDamage : MonoBehaviour
 {
     public int damage;
-    public float resetTime =0.25f;
+    public float resetTime = 0.25f;
+    private bool canShoot = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
-            GetComponent<Collider2D>().enabled = false;
-            Invoke("ResetTrigger", resetTime);
+            if(canShoot)
+            {
+                GetComponent<Collider2D>().enabled = false;
+                collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+
+                Invoke("ResetTrigger", resetTime);
+            }
         }
     }
 
