@@ -7,3 +7,7 @@ Behind enemy lines, the player plays a submarine, fights drones and get score.
 **Changes:**
   - Fixed game crashing upon taking damage
   - Released as a public build
+  
+  **Credits**
+  - Art, Assets and coding - myself
+  - Main Menu Text - TextMeshPro (https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126)
