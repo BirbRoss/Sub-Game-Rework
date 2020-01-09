@@ -2,11 +2,10 @@
 
 Behind enemy lines, the player plays a submarine, fights drones and get score.
 
-**Version 0.2.02 (First public release)**
+**Version 0.2.03 (Public release)**
 
 **Changes:**
-  - Fixed game crashing upon taking damage
-  - Released as a public build
+  - Fixed player instantly taking 98 damage upon the second attack
   
   **Credits**
   - Art, Assets and coding - myself
