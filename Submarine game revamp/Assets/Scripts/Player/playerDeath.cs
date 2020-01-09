@@ -6,15 +6,22 @@ using UnityEngine.SceneManagement;
 public class playerDeath : MonoBehaviour
 {
     public GameUI scoreKeeper;
+    private bool isDead = false;
 
     public void Death()
-    { 
-        scoreKeeper.enabled = false;
+    {
+        isDead = true;
+    }
 
-        //Loads main screen
-        SceneManager.LoadScene(0);
-
-        gameObject.SetActive(false);
-        gameObject.GetComponent<healthSystem>().enabled = false;
+    private void Update()
+    {
+        if (isDead == true)
+        {
+            //disable game object
+            gameObject.SetActive(false);
+            scoreKeeper.enabled = false;
+            //Loads main screen
+            SceneManager.LoadScene(0);
+        }
     }
 }

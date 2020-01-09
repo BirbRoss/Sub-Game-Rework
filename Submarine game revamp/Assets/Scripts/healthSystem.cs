@@ -23,7 +23,7 @@ public class healthSystem : MonoBehaviour
 
         onDamaged.Invoke(health);
         Debug.Log(health);
-
-
     }
+
+
 }
