@@ -48,13 +48,18 @@ public class subMovement : MonoBehaviour
         //Manages how fast the player is moving based upon their speed level
         if (speedLevel == -1)
         {
+            //Adding force caused the player to accelerate and was really hard to slow down, hense disabled for the time being, but could be readed later with more time to focus on adding realistic acceleration
             //subRB.AddForce(Vector2.down * (speed / 2) * Time.deltaTime, ForceMode2D.Force);
+
+            //sets how fast the player moves (backwards in this case) and updates the speed section of the UI
             subRB.velocity = -transform.up * (speed * 0.5f);
             speedText.text = "Speed: BCK";
         }
         else if (speedLevel == 0)
         {
             //subRB.AddForce(Vector2.zero);
+
+            //Stops player
             subRB.velocity = new Vector2(0, 0);
             speedText.text = "Speed: STP";
         }
@@ -77,6 +82,7 @@ public class subMovement : MonoBehaviour
             speedText.text = "Speed: FLK";
         }
 
+        //Changes to moving animation when the player moves
         if (speedLevel >= 1)
         {
             moveAnim.SetBool("HasSpeed", true);
@@ -87,7 +93,7 @@ public class subMovement : MonoBehaviour
         }
 
 
-        //Here's where rotation goes when I work that out, probably something to do with doing something like Rotate around(Location + 5x(or -x))
+        //Uses torque to make a turning circle, but this can be buggy ESPECIALLY when it doesn't register the key press not being lifted, so should be replaced at somepoint, hopefully.
         if (Input.GetKeyDown("a"))
         {
             subRB.AddTorque(rotate * 1.5f);
@@ -98,7 +104,8 @@ public class subMovement : MonoBehaviour
             subRB.AddTorque(-rotate * 1.5f);
             rightParticle.Play();
         }
-        //removes torque once button isn't pressed
+
+        //removes torque once button isn't pressed, stopping the turn by reducing the angular velocity of the player to 0
         if (Input.GetKeyUp("a"))
         {
             slowdown();

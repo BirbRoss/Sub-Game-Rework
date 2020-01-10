@@ -14,7 +14,7 @@ public class addScore : MonoBehaviour
     {       
         if (!scoreSent)
         {
-
+            //sends a debug message, sets data sent to true (to prevent possible loops) and sends an update score to the UI
             Debug.Log("I have been executed");
             scoreSent = true;
             OnSendScore(scoreToAdd);

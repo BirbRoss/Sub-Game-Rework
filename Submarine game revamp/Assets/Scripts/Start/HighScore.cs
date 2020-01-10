@@ -18,16 +18,19 @@ public class HighScore : MonoBehaviour
     private int SScore;
     private int TScore;
 
-    private void Start()
+    private void OnEnable()
     {
+        //runs check, since if player's score = 0 then there's no need to check since they either haven't played or got any score
         if (PlayerPrefs.GetInt("highscore") != 0)
         {
             Test();
         }
 
+        //sets these temp strings for if there's no person in that place on the podium
         string temp = "AAA";
         string tempScore = "0";
 
+        //loads podium from saved playerprefs
         if (PlayerPrefs.GetString("fName") != "")
         {
             FName.text = PlayerPrefs.GetString("fName");
@@ -64,6 +67,7 @@ public class HighScore : MonoBehaviour
 
     }
 
+    //Tests the current score being loaded, checking if it's better than any of the already stored values then checking if it's better than the person above and if not, logging their score and name in player prefs
     private void Test()
     {
         int TestScore = PlayerPrefs.GetInt("highscore");

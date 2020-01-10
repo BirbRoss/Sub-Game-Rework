@@ -16,17 +16,20 @@ public class Weapon : MonoBehaviour
 
     public Animator firing;
 
+    //Is the cooldown for weapons, preventing them from firing constantly
     private void SetFiring()
     {
         isFiring = false;
     }
 
+    //Instansiates the torpedo projectile then goes on cooldown
     private void FireTorp()
     {
         isFiring = true;
         Instantiate(torpPrefab, torpSpawn.position, torpSpawn.rotation);
         Invoke("SetFiring", TorpTime);
     }
+    //Instansiates the laser projectile then goes on cooldown
     private void FireLaser()
     {
         isFiring = true;
@@ -38,14 +41,20 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //is right click/left alt pressed
         if(Input.GetButton("Fire2"))
         {
+            //is not on cooldown
             if(!isFiring)
             {
                 FireTorp();
+
+                //prevents from firing rapidly
+                firing.SetBool("isFiring", true);
             }
         }
 
+        //is leftclick/left control pressed
         if (Input.GetButton("Fire1"))
         {
             if(!isFiring)
@@ -53,10 +62,6 @@ public class Weapon : MonoBehaviour
                 FireLaser();
                 firing.SetBool("isFiring", true);
             }
-        }
-        else
-        {
-            firing.SetBool("isFiring", false);
         }
     }
 }

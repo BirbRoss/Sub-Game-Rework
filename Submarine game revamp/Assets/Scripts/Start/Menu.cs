@@ -11,12 +11,13 @@ public class Menu : MonoBehaviour
 
     public InputField inName;
 
+
     private void Start()
     {
-        Main.SetActive(true);
-        Highscore.SetActive(false);
+        goBack();
     }
 
+    //Sets the players name, clear the current stored score (just in case), sets has played to true, tells the console the player's name (for debugging purposes) and then loads the game scene 
     public void Play()
     {
         PlayerPrefs.SetString("playerName", inName.text.ToUpper());
@@ -25,22 +26,28 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    //Closes application, sets the highscore to active to add the current stored highscore to the highscores and sets the currently stored score to 0 so that the highscore doesn't get confused when it starts back up
     public void Quit()
     {
+        Highscore.SetActive(true);
+        PlayerPrefs.SetInt("highscore", 0);
         Application.Quit();
     }
 
+    //loads the main scene (used in the game over menu)
     public void backToMain()
     {
         SceneManager.LoadScene(0);
     }
 
+    //Sets highscores to visible and main page to invisible
     public void goToScore()
     {
         Highscore.SetActive(true);
         Main.SetActive(false);
     }
 
+    //Sets main page to visible and highscores to invisible
     public void goBack()
     {
         Main.SetActive(true);

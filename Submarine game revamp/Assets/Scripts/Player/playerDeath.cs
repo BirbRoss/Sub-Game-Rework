@@ -8,6 +8,7 @@ public class playerDeath : MonoBehaviour
     public GameUI scoreKeeper;
     private bool isDead = false;
 
+    //executed by an event in the health system, updates bool
     public void Death()
     {
         isDead = true;
@@ -15,6 +16,7 @@ public class playerDeath : MonoBehaviour
 
     private void Update()
     {
+        //disables Player's game object to prevent further collisions and loops then loads the game over screen and scor keeper to prevent the drones that are destroyed when the scene loads to count towards the score.
         if (isDead == true)
         {
             //disable game object

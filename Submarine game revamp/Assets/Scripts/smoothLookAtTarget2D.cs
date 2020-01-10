@@ -11,6 +11,7 @@ public class smoothLookAtTarget2D : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        //looks towards the target if it exists, using pretty mucht he same code as the smooth mouse look
         if (target != null)
         {
             Vector3 difference = target.position - transform.position;
@@ -20,6 +21,7 @@ public class smoothLookAtTarget2D : MonoBehaviour
         }
     }
 
+    //sets the current target (usually upon spawn)
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;

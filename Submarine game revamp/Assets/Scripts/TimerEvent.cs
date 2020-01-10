@@ -11,18 +11,20 @@ public class TimerEvent : MonoBehaviour
 
     public bool repeat = false;
     public bool random = false;
-    public UnityEvent onTimeerComplete;
+    public UnityEvent onTimerComplete;
 
     private void Start()
     {
+        //checks if random is enabled then sets time to a random value
         if (random)
         {
             time = Random.Range(minTime, maxTime);
         }
 
+        //checks if repeat is not checks and if so it will only envoke once or it will envoke repeating every few seconds as set by time
         if (!repeat)
         {
-            onTimeerComplete.Invoke();
+            onTimerComplete.Invoke();
         }
         else
         {
@@ -30,10 +32,11 @@ public class TimerEvent : MonoBehaviour
         }
     }
 
+    //Executes onTimerComplete and randomizes a new time for the invoke to use as a cooldown
     private void timerComplete()
     {
         {
-            onTimeerComplete.Invoke();
+            onTimerComplete.Invoke();
 
             if (random)
             {

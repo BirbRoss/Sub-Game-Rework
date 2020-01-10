@@ -12,6 +12,7 @@ public class gameOverScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //finds the player's score before they lost and changes text to that value
         score = PlayerPrefs.GetInt("highscore");
         currentText.text = score.ToString();
     }

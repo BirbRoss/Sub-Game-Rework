@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject prefabToSpawn;
     public float adjustmentAngle = 0;
 
+    //just instantiates the set prefab
     public void Spawn()
     {
         Vector3 rotationInDegrees = transform.eulerAngles;
