@@ -2,11 +2,11 @@
 
 Behind enemy lines, the player plays a submarine, fights drones and get score.
 
-**Version 0.2.05 (Public release)**
+**Version 0.2.05 (Public release, minor patch)**
 
 **Changes:**
-  - Added game over screen
-  - Fixed bug relating to score not being added to the UI (and by extension, highscores) correctly
+  - Fixed small higscore bugs
+  - Added proper comments
   
   **Credits**
   - Art, Assets and coding - myself
