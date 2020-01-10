@@ -8,12 +8,15 @@ public class addScore : MonoBehaviour
     public static event SendScore OnSendScore;
 
     public int scoreToAdd = 10;
+    private bool scoreSent = false;
 
-
-    private void OnDestroy()
-    {
-        if (OnSendScore != null)
+    public void OnAddScore()
+    {       
+        if (!scoreSent)
         {
+
+            Debug.Log("I have been executed");
+            scoreSent = true;
             OnSendScore(scoreToAdd);
         }
     }

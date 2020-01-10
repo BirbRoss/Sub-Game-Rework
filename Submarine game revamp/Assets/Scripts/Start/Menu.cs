@@ -20,6 +20,7 @@ public class Menu : MonoBehaviour
     public void Play()
     {
         PlayerPrefs.SetString("playerName", inName.text.ToUpper());
+        PlayerPrefs.SetInt("highscore", 0);
         Debug.Log(PlayerPrefs.GetString("playerName"));
         SceneManager.LoadScene(1);
     }
@@ -27,6 +28,11 @@ public class Menu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void backToMain()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void goToScore()

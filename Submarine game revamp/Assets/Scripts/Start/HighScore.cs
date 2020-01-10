@@ -18,7 +18,7 @@ public class HighScore : MonoBehaviour
     private int SScore;
     private int TScore;
 
-    private void OnEnable()
+    private void Start()
     {
         if (PlayerPrefs.GetInt("highscore") != 0)
         {

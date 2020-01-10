@@ -20,6 +20,7 @@ public class GameUI : MonoBehaviour
     {
         sendHealth.OnUpdateHealth += UpdateHealthBar;
         addScore.OnSendScore += UpdateScore;
+        PlayerPrefs.SetInt("highscore", playerScore);
     }
 
     public void UpdateHealthBar(int Health)
@@ -29,9 +30,8 @@ public class GameUI : MonoBehaviour
     
     private void UpdateScore(int theScore)
     {
-            playerScore += theScore;
-            PlayerPrefs.SetInt("highscore", playerScore);
-            Debug.Log(PlayerPrefs.GetInt("highscore"));
-            scoreText.text = "Score: " + playerScore.ToString();
+        playerScore = playerScore + theScore;
+        scoreText.text = "Score: " + playerScore.ToString();
+        
     }
 }

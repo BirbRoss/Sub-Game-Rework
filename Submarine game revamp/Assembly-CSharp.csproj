@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\DestroyOnDie.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyPathFinder.cs" />
+    <Compile Include="Assets\Scripts\Game Over\gameOverScore.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\healthSystem.cs" />
     <Compile Include="Assets\Scripts\Player\MouthSmoothLook2D.cs" />

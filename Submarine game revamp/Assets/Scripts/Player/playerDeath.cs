@@ -21,7 +21,7 @@ public class playerDeath : MonoBehaviour
             gameObject.SetActive(false);
             scoreKeeper.enabled = false;
             //Loads main screen
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
     }
 }

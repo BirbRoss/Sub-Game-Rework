@@ -23,6 +23,9 @@ public class healthSystem : MonoBehaviour
             onDie.Invoke();           
         }
 
+        //This causes the player to recieve 98 damage
+        //onDamaged.Invoke(health);
+
         healthBar.value = health;
         Debug.Log(health);
     }
