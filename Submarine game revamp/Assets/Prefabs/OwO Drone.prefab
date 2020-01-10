@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c6605feede7c840bd0b19424e7a936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   resetTime: 1
 --- !u!70 &1859162940
 CapsuleCollider2D:
@@ -315,3 +315,4 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  healthBar: {fileID: 0}
